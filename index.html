@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--Bruh why are you snooping in my code?-->
+<html lang="en">
+<head>
+<title>AP Euro News</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script> 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+src="bower_components/aos/dist/aos.js">
+AOS.init();
+</script>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #c96344; /*1abc9c */
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.newsimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="https://docs.google.com/document/d/12Jy_8BbcMf2F6le0jOjH-IH0elAomD-y6i5vxYeojgM/edit?usp=sharing">Works Cited</a></li>
+</ul>
+<div class="header" data-aos="fade-up">
+  <h1>AP Euro News</h1>
+  <p>By Wills Marable</p>
+</div>
+
+
+<div class="row">
+  <div class="side">
+    <img  style="height:30px;"></img><br>
+    <div  style="height:60px;"></div>
+    <h3> Related Stories</h3>
+    <a href="https://docs.google.com/document/d/12Jy_8BbcMf2F6le0jOjH-IH0elAomD-y6i5vxYeojgM/edit?usp=sharing">Works Cited</a>
+    <p></p>
+    <a href="https://www.eisenhowerlibrary.gov/sites/default/files/research/online-documents/u2-incident/5-6-60-no249.pdf">State Department issues press release regarding U-2</a>
+    <p></p>
+    <a href="https://www.eisenhowerlibrary.gov/sites/default/files/research/online-documents/u2-incident/4-25-60-mfr.pdf">President Eisenhower authorizes one additional overflight of the Soviet Union</a>
+    <p></p>
+  </div>
+  <div class="main" data-aos="ease-in">
+    <h2>AMERICAN AIRCRAFT SHOT DOWN BY SOVIETS </h2>
+    <h5>May 1, 1960</h5>
+<!--img src="u2.png" style ="height:500px"-->
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="u2.png" style="width:100%">
+    <div class="text">A U-2 at cruising altitude</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="u2_img_2.png" style="width:100%">
+    <div class="text">A promotional image of the U-2</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="u2_interior.png" style="width:100%">
+    <div class="text">A cockpit view from a U-2</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+    <p> A diplomatic crisis ensues as president Eisenhower admits to conducting covert intelligence operations in the Soviet Union. This comes after an American U-2 spy plane was shot down during a reconnaissance flight over the hostile nation. Pilot Francis Gary Powers was captured, and sentenced to 10 years in a Soviet prison for espionage. The discovery of this mission has led Eisenhower to release details about the event. Information released after the incident indicates that the US government has been conducting these missions for years without being discovered. These missions were carried to monitor the USSR’s progress in the development of military technology, in order to stay ahead in the arms race. There are talks of negotiations being carried out by Eisenhower to return Powers to the United States, but it will likely take up to two years for these to work.</p>
+    <p>According to our sources within the Soviet Union, the Soviets knew of these covert missions for years, but were unable to do anything about them. This is due to Lockheed Martin’s amazing feats of engineering. The U-2 Spy Plane is able to reach altitudes of over 13 miles above the ground,almost leaving earth’s atmosphere. Soviet air defenses were unable to reach the aircraft at this altitude, so they were defenseless against us. The US continued these operations until the Soviets invented their Zenith surface-to-air missile system, which was able to fire at ranges sufficient to take down the U-2.
+    </p>
+    <br>
+    <h2>Uncovered Top Secret Document</h2>
+    <h5>November 24, 1954</h5>
+    <p>"Authorization was sought from the President to go ahead on a program to produce thirty special high performance aircraft at a cost of about $35 million. The President approved this action. Mr. Allen Dulles indicated that his organization could not finance this whole sum without drawing attention to it, and it was agreed that Defense would seek to carry a substantial part of the financing.</p>
+    <p>The secretary of Defense sought the President’s agreement to taking one last look at the type of operations planned when the aircraft are available. The President indicated agreement. </p>
+    <p>To a question by the President, the Secretary of State indicated that difficulties might arise out of these operations, but that we could live through them.</p>
+    <p>In summary, the President directed those present to go ahead and get the equipment, but before initiating operations to come in for one last look at the plans."</p>
+    <h3>Analysis</h3>
+    <p>This document is a record of a conversation where President Eisenhower approves the production of 30 U-2 planes. He does this during a time of increasing tensions with the Soviet Union. They are entering an arms race, where whoever can produce the best military technology wins. The U-2 spy plane was necessary for reconnaissance  missions to keep tabs on Soviet military innovations. Eisenhower knew that, and invested in the production of these planes to do so. The document comes from the point of view of Andrew Goodpaster, at the time a Colonel in the US Military. He took notes on the discussion between him and Eisenhower, recording Eisenhower’s decision to order the planes. The purpose of this document was to send to Lockheed Martin, the manufacturer of the U-2, and to order the production of 30 aircraft. This is significant because without the U-2, the US would have missed out on vital intelligence that gave them the upper hand in the war. </p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Made by Wills Marable</p>
+</div>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+</body>
+</html>
